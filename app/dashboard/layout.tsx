@@ -14,10 +14,10 @@ export default async function DashboardLayout({ children }: { children: React.Re
     .single()
 
   return (
-    <div className="flex h-screen bg-gray-50 overflow-hidden">
+    <div className="flex flex-col md:flex-row h-screen bg-gray-50 overflow-hidden">
       <Sidebar user={{ email: session.user.email!, name: profile?.full_name }} />
       <main className="flex-1 overflow-y-auto">
-        <div className="max-w-6xl mx-auto px-6 py-8">
+        <div className="max-w-6xl mx-auto px-4 md:px-6 py-6 md:py-8">
           {children}
         </div>
       </main>
